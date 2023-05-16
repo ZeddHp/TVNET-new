@@ -1,0 +1,20 @@
+{
+    "name": "valters/tvnet",
+    "autoload": {
+        "psr-4": {
+            "ArticlesApp\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Walle",
+            "email": "valters.jargans@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.6",
+        "twig/twig": "^3.6",
+        "nikic/fast-route": "^1.3",
+        "nesbot/carbon": "^2.66"
+    }
+}

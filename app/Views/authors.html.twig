@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1 class="pt-6 text-5xl font-semibold text-center text-white">
+        Meet our
+        <span class="font-serif italic">
+            Authors
+        </span>
+    </h1>
+
+    <div class="mx-20 grid gap-8 my-8 grid-cols-4">
+        {% for author in authors %}
+            <form action="/author" method="GET"
+                  class="flex flex-col shadow-md items-center transition-colors p-8 duration-300 transform border
+                  cursor-pointer rounded-xl hover:border-transparent group hover:bg-gray-800">
+                <button type="submit" name="authorId" value="{{ author.id }}" class="flex flex-col items-center
+                        transition-all hover:scale-110">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-700 align-center"
+                         src="https://placehold.co/100x100" alt="">
+                    <h1 class="mt-4 text-xl font-semibold text-gray-200">
+                        {{ author.name }}
+                    </h1>
+                    <p class="mt-2 text-gray-400">
+                        {{ author.eMail }}
+                    </p>
+                </button>
+            </form>
+        {% endfor %}
+    </div>
+
+{% endblock %}
