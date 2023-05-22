@@ -19,7 +19,7 @@ class ShowArticleService
         $article = $this->client->fetchSingleArticle($request->getArticleId());
 
         if ($article == null) {
-            throw new ResourceNotFoundException('Article by id ' . $request->getArticleId() . ' not found');
+            //throw new ResourceNotFoundException('Article by id ' . $request->getArticleId() . ' not found');
         }
 
         $comments = $this->client->fetchCommentsByArticleId($request->getArticleId());

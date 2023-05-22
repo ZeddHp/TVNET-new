@@ -19,7 +19,7 @@ class ShowAuthorService
         $author = $this->client->fetchSingleAuthor($request->getAuthorId());
 
         if ($author == null) {
-            throw new ResourceNotFoundException('Author by id ' . $request->getAuthorId() . ' not found');
+            //throw new ResourceNotFoundException('Author by id ' . $request->getAuthorId() . ' not found');
         }
 
         $articles = $this->client->fetchArticlesByAuthorId($request->getAuthorId());
